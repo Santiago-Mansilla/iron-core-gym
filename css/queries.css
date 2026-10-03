@@ -1,0 +1,367 @@
+@media (max-width: 1100px) {
+  .plan {
+    grid-template-columns: 1fr 180px 1fr;
+    gap: 35px;
+
+    .btn {
+      grid-column: 1 / -1;
+      justify-self: start;
+    }
+  }
+
+  .contact-content {
+    gap: 70px;
+  }
+}
+
+@media (min-width: 801px) {
+  .header {
+    .menu-toggle {
+      display: none;
+    }
+
+    .nav {
+      display: flex;
+      position: static;
+      width: auto;
+      padding: 0;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      background: transparent;
+      border: 0;
+      flex-direction: row;
+      gap: 35px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .header {
+    padding: 22px 6%;
+
+    .menu-toggle {
+      display: flex;
+      width: 35px;
+      height: 30px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 1001;
+
+      span {
+        width: 100%;
+        height: 2px;
+        background: #f5f5f5;
+        transition:
+          transform 0.25s ease,
+          opacity 0.25s ease;
+      }
+
+      &.active {
+        span:nth-child(1) {
+          transform: translateY(14px) rotate(45deg);
+        }
+
+        span:nth-child(2) {
+          opacity: 0;
+        }
+
+        span:nth-child(3) {
+          transform: translateY(-14px) rotate(-45deg);
+        }
+      }
+    }
+
+    .nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 30px 6%;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      background: rgba(11, 11, 11, 0.98);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease,
+        transform 0.25s ease;
+
+      &.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      a {
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  .page {
+    padding-top: 90px;
+  }
+
+  .page-hero {
+    min-height: 65vh;
+    padding: 100px 6% 80px;
+
+    h1 {
+      font-size: clamp(3.5rem, 13vw, 6rem);
+    }
+  }
+
+  .hero {
+    padding: 130px 6% 50px;
+    background-position: 67% center;
+  }
+
+  .hero-content {
+    h1 {
+      font-size: clamp(4rem, 15vw, 7rem);
+    }
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .btn {
+      width: 100%;
+      max-width: 260px;
+    }
+  }
+
+  .about-story {
+    padding: 90px 6%;
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .values {
+    padding: 90px 6%;
+  }
+
+  .training-programs,
+  .trainers,
+  .plans-section,
+  .contact-content {
+    padding: 90px 6%;
+  }
+
+  .section-heading {
+    margin-bottom: 50px;
+  }
+
+  .program {
+    padding: 40px 0;
+  }
+
+  .trainer {
+    padding: 40px 0;
+  }
+
+  .trainer-image {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    display: block;
+    margin-bottom: 30px;
+    object-fit: cover;
+  }
+
+  .plan {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 40px 0;
+
+    .btn {
+      grid-column: auto;
+    }
+  }
+
+  .plan-price {
+    font-size: 3.5rem;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .contact-info {
+    gap: 40px;
+  }
+
+  .training-cta {
+    padding: 90px 6%;
+  }
+}
+
+@media (max-width: 550px) {
+  .header {
+    padding: 18px 5%;
+
+    .menu-toggle {
+      width: 32px;
+      height: 27px;
+    }
+
+    .nav {
+      padding: 25px 5%;
+      gap: 22px;
+
+      a {
+        font-size: 0.7rem;
+        letter-spacing: 0.1em;
+      }
+    }
+  }
+
+  .page {
+    padding-top: 85px;
+  }
+
+  .page-hero {
+    min-height: 60vh;
+    padding: 80px 5% 70px;
+
+    h1 {
+      margin: 15px 0 25px;
+      font-size: clamp(3rem, 16vw, 5rem);
+    }
+
+    > p:last-child {
+      font-size: 0.95rem;
+    }
+  }
+
+  .hero {
+    padding: 120px 5% 40px;
+  }
+
+  .hero-content {
+    h1 {
+      font-size: clamp(3.8rem, 17vw, 6rem);
+    }
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .hero-actions {
+    gap: 10px;
+
+    .btn {
+      max-width: none;
+    }
+  }
+
+  .section-heading {
+    margin-bottom: 40px;
+
+    h2 {
+      font-size: clamp(2.8rem, 14vw, 4.5rem);
+    }
+  }
+
+  .about-story {
+    padding: 75px 5%;
+
+    h2 {
+      font-size: clamp(2.8rem, 14vw, 4.5rem);
+    }
+  }
+
+  .values {
+    padding: 75px 5%;
+  }
+
+  .value {
+    padding: 30px 0;
+
+    h3 {
+      font-size: 1.7rem;
+    }
+  }
+
+  .training-programs,
+  .trainers,
+  .plans-section,
+  .contact-content {
+    padding: 75px 5%;
+  }
+
+  .program {
+    padding: 35px 0;
+
+    &:hover {
+      padding-left: 0;
+    }
+  }
+
+  .program-content {
+    h3 {
+      font-size: 2rem;
+    }
+  }
+
+  .trainer {
+    padding: 35px 0;
+  }
+
+  .trainer-image {
+    max-width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .trainer-info {
+    h3 {
+      font-size: 1.9rem;
+    }
+  }
+
+  .billing-toggle {
+    margin-bottom: 55px;
+
+    button {
+      padding: 13px 20px;
+      font-size: 0.7rem;
+    }
+  }
+
+  .plan {
+    padding: 35px 0;
+  }
+
+  .plan-price {
+    font-size: 3rem;
+  }
+
+  .training-cta {
+    padding: 75px 5%;
+
+    h2 {
+      font-size: clamp(3rem, 14vw, 5rem);
+    }
+  }
+
+  .contact-content {
+    gap: 55px;
+  }
+
+  .contact-form {
+    gap: 25px;
+  }
+}
